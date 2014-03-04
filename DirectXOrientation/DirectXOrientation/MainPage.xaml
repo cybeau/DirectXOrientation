@@ -1,0 +1,24 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PhoneDirect3DXamlAppInterop.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="PortraitOrLandscape" Orientation="Portrait"
+    shell:SystemTray.IsVisible="True"  OrientationChanged="PhoneApplicationPage_OrientationChanged">
+
+    <!--LayoutRoot est la grille racine où tout le contenu de la page est placé-->
+    <DrawingSurfaceBackgroundGrid x:Name="DrawingSurfaceBackground" Loaded="DrawingSurfaceBackground_Loaded">
+        <!-- Nous ajoutons ce contenu pour mettre en évidence le problème-->
+        <Border Background="Red" HorizontalAlignment="Left" VerticalAlignment="Top" Width="200" Height="100" Margin="24">
+            <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">Xaml Content</TextBlock>
+        </Border>
+    </DrawingSurfaceBackgroundGrid>
+
+</phone:PhoneApplicationPage>
